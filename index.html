@@ -1,4 +1,144 @@
-<!DOCTYOE html>
-<a href="https://tupibya.github.io/earthquake-early-warning-receiver.html">緊急地震速報受信機</a>
-<br>
-<a href="https://tupibya.github.io/seismic-wave-countdown.html">地震波カウントダウン</a>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Navigation</title>
+    <style>
+        /* 全体のリセットと背景グラデーション */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* コンテナの配置 */
+        .container {
+            display: flex;
+            gap: 40px;
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+        }
+
+        /* リンクカードの基本スタイル */
+        .nav-card {
+            flex: 1;
+            position: relative;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        /* カードのホバー効果 */
+        .nav-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 左側カードのホバー時の輝き */
+        .card-left:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* 右側カードのホバー時の輝き */
+        .card-right:hover {
+            border-color: #818cf8;
+            box-shadow: 0 0 30px rgba(129, 140, 248, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* タイトルテキスト */
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        /* 説明テキスト */
+        .subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        .nav-card:hover .subtitle {
+            color: #e2e8f0;
+        }
+
+        /* 矢印アイコンの演出 */
+        .arrow {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .nav-card:hover .arrow {
+            background: #ffffff;
+            color: #0f172a;
+            transform: translateX(4px);
+        }
+
+        /* レスポンシブ対応（スマホ表示時に縦並びにする） */
+        @media (max-width: 640px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .nav-card {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 1つ目のURL設定（hrefの中に飛びたいURLを入れてください） -->
+        <a href="https://tupibya.github.io/earthquake-early-warning-receiver.html" class="nav-card card-left">
+            <div class="title">緊急地震速報受信機 を開く</div>
+            <div class="subtitle">緊急地震速報受信機 を開きます</div>
+            <div class="arrow">→</div>
+        </a>
+
+        <!-- 2つ目のURL設定（hrefの中に飛びたいURLを入れてください） -->
+        <a href="https://tupibya.github.io/seismic-wave-countdown.html" class="nav-card card-right">
+            <div class="title">地震波カウントダウン を開く</div>
+            <div class="subtitle">地震波カウントダウン を開きます</div>
+            <div class="arrow">→</div>
+        </a>
+    </div>
+
+</body>
+</html>
