@@ -32,6 +32,8 @@
 「README.md」を一部変更
 ### v1.8
 「index.html」のボタンのURLを新しいタブに開くように変更
+### v1.9
+「REDME.md」を一部変更
 ## API詳細
 https://p2pquake.net/ を使用しました。  
 URLはhttps://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0/ です。
