@@ -37,8 +37,9 @@
 ### v2.0 ~ v2.1
 大量の修正・変更・追加・訓練・練習がありました。
 「index.html」の超細かな修正・変更
-### v3.0
+### v3.0 ~ v3.5
 沢山のhtmlファイルを大幅に変更
+「index.html」のスクロールの試み
 ## API詳細
 https://p2pquake.net/ を使用しました。  
 URLはhttps://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0/ です。
