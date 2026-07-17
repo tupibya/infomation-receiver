@@ -1,4 +1,4 @@
-# earthquake-infomation-receiver
+# infomation-receiver
 ## 概要
 翻訳してみたら分かる通り、「地震情報受信機」です。
 即時に地震情報等を受信して表示するものです。  
@@ -40,11 +40,12 @@
 ### v3.0 ~ v3.5
 沢山のhtmlファイルを大幅に変更  
 「index.html」のスクロールの試み
-### v4.0
-色々
+### v4.0 ~ v4.1
+色々  
+タイトルを変更
 ## API詳細
-https://p2pquake.net/ を使用しました。  
-URLはhttps://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0/ です。
+[P2P地震情報](https://p2pquake.net)を使用しました。  
+URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
 ## プライバシー・ポリシー
 ### earthquake-early-warning-receiver
 緊急地震速報(警報)が発表されたら即時に情報が入りますが、気象庁の都合により、低精度な可能性があります。  
