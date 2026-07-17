@@ -43,9 +43,10 @@
 ### v4.0 ~ v4.1
 色々  
 タイトルを変更
-### v5.0 ~ v5.5
+### v5.0 ~ v5.6
 大型アップデートにふさわしいアップデートしたんでこれです  
 色々
+「haki.html」の一部を変更
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
