@@ -67,5 +67,4 @@ URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0
 現在故障中です。apiからの情報を受信しない可能性があります。  
 現在はkosho.htmlで故障のページを作成しています。
 ## 利用規約
-これは、creative commons zero v1.0 universalに従って公開されています。
-https://creativecommons.org/publicdomain/zero/1.0/deed.ja/
+これは、[creative commons zero v1.0 universal](https://creativecommons.org/publicdomain/zero/1.0/deed.ja/)に従って公開されています。
