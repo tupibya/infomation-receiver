@@ -1,7 +1,7 @@
 # infomation-receiver
 ## 概要
-翻訳してみたら分かる通り、「地震情報受信機」です。
-即時に地震情報等を受信して表示するものです。  
+翻訳してみたら分かる通り、「情報受信機」です。
+即時に情報を受信して表示するものです。  
 ・震度速報  
 ・震源情報  
 ・地震情報  
@@ -51,7 +51,7 @@
 アイコン付けた  
 アイコンによる修正  
 アイコンによる修正×2
-### v6.0 ~ v6.10
+### v6.0 ~ v6.11
 色々  
 「README.md」の改行できていなかった問題を修正  
 「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)  
@@ -60,7 +60,8 @@
 「earthquake-early-warning-receiver.html」を一部  
 「README.md」の改行できていなかった問題を修正  
 「earthquake-early-warning-receiver.html」がPLUM法に対応！！！  
-「earthquake-early-warning-receiver.html」のプログラムを少し修正
+「earthquake-early-warning-receiver.html」のプログラムを少し修正  
+「README.md」の文を多少修正
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
@@ -69,7 +70,7 @@ URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0
 緊急地震速報(警報)が発表されたら即時に情報が入りますが、気象庁の都合により、低精度な可能性があります。  
 ご了承下さい。
 ### seismic-wave-countdown
-現在故障中です。apiからの情報を受信しない可能性があります。  
-現在はkosho.htmlで故障のページを作成しています。
+このサイトは破棄されました。apiからの情報を受信しない可能性があります。  
+現在はhaki.htmlで破棄内容ページを作成していました。
 ## 利用規約
 これは、[creative commons zero v1.0 universal](https://creativecommons.org/publicdomain/zero/1.0/deed.ja/)に従って公開されています。
