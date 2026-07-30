@@ -5,8 +5,16 @@
 <title>気象警報テスト表示</title>
 
 <style>
-  body { background:#111; color:#fff; font-family:system-ui; padding:20px; }
-  h1 { text-align:center; margin-bottom:20px; }
+  body {
+    background:#111;
+    color:#fff;
+    font-family:system-ui, sans-serif;
+    padding:20px;
+  }
+  h1 {
+    text-align:center;
+    margin-bottom:20px;
+  }
   .card {
     background:#1e1e1e;
     padding:15px;
@@ -14,8 +22,12 @@
     border-radius:8px;
     border-left:5px solid #ffcc00;
   }
-  .warn { border-left-color:#ff3b3b; }
-  .adv { border-left-color:#ffcc00; }
+  .warn {
+    border-left-color:#ff3b3b;
+  }
+  .adv {
+    border-left-color:#ffcc00;
+  }
 </style>
 </head>
 
@@ -27,29 +39,37 @@
 async function loadWarnings() {
   const url = "https://www.jma.go.jp/bosai/warning/data/warning/220000.json";
 
-  const res = await fetch(url);
-  const data = await res.json();
+  try {
+    const res = await fetch(url);
+    const data = await res.json();
 
-  const list = data.warning[0].warnings;  // ← ここに警報一覧が入ってる
-  const container = document.getElementById("warnings");
-  container.innerHTML = "";
+    // 警報一覧
+    const list = data.warning[0].warnings;
 
-  list.forEach(w => {
-    const div = document.createElement("div");
+    const container = document.getElementById("warnings");
+    container.innerHTML = "";
 
-    const isWarn = w.headline.includes("警報");
-    const isAdv  = w.headline.includes("注意報");
+    list.forEach(w => {
+      const div = document.createElement("div");
 
-    div.className = "card " + (isWarn ? "warn" : isAdv ? "adv" : "");
+      const isWarn = w.headline.includes("警報");
+      const isAdv  = w.headline.includes("注意報");
 
-    div.innerHTML = `
-      <h2>${w.headline}</h2>
-      <p>状態: ${w.status}</p>
-      <p>コード: ${w.code}</p>
-    `;
+      div.className = "card " + (isWarn ? "warn" : isAdv ? "adv" : "");
 
-    container.appendChild(div);
-  });
+      div.innerHTML = `
+        <h2>${w.headline}</h2>
+        <p>状態: ${w.status}</p>
+        <p>コード: ${w.code}</p>
+      `;
+
+      container.appendChild(div);
+    });
+
+  } catch (e) {
+    document.getElementById("warnings").innerHTML =
+      "<p>取得エラー：ブラウザをHTTP/HTTPSで開いてください。</p>";
+  }
 }
 
 loadWarnings();
