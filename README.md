@@ -66,6 +66,8 @@
 「index.html」の404エラーを解消(したはず)  
 「favicon.ico」を作成したが動作せず(サイズ関係かな)  
 「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
+### v7.0
+「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
