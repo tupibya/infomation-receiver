@@ -73,6 +73,7 @@
 「favicon.ico」で全てのサイトのタブにアイコンを設定  
 「weather-infomation-receiver.html」故障  
 「error」フォルダにあるページは全てタブアイコンを禁止マークに設定  
+「earthquake-early-warning-receiver.html」でタブにアイコンを設定
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
