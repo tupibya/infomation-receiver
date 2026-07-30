@@ -1,14 +1,77 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>気象警報受信機</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>気象警報（静岡県）</h1>
-  <div id="warnings"></div>
+<meta charset="UTF-8">
+<title>気象警報受信機</title>
 
-  <script src="script.js"></script>
+<style>
+  body {
+    font-family: "Inter", sans-serif;
+    background: #121212;
+    color: #fff;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  #warnings {
+    display: grid;
+    gap: 15px;
+  }
+  .card {
+    background: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 5px solid #ffcc00;
+  }
+  .card h2 {
+    margin: 0 0 10px;
+    font-size: 20px;
+  }
+  .card p {
+    margin: 0;
+    opacity: 0.8;
+  }
+</style>
+</head>
+
+<body>
+<h1>気象警報（静岡県）</h1>
+<div id="warnings"></div>
+
+<script>
+const API_URL = "https://www.jma.go.jp/bosai/warning/data/warning/220000.json";
+
+async function loadWarnings() {
+  try {
+    const res = await fetch(API_URL);
+    const data = await res.json();
+
+    const areaWarnings = data.warning[0].warnings;
+    const container = document.getElementById("warnings");
+    container.innerHTML = "";
+
+    areaWarnings.forEach(w => {
+      const card = document.createElement("div");
+      card.className = "card";
+
+      card.innerHTML = `
+        <h2>${w.headline}</h2>
+        <p>種別コード: ${w.code}</p>
+        <p>発表状態: ${w.status}</p>
+      `;
+
+      container.appendChild(card);
+    });
+  } catch (e) {
+    console.error("警報取得エラー:", e);
+  }
+}
+
+loadWarnings();
+setInterval(loadWarnings, 60000); // 1分ごと更新
+</script>
+
 </body>
 </html>
