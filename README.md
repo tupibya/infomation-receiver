@@ -12,7 +12,7 @@
 上記は全て対応させるつもりはありません。ご了承下さい。  
 (キャンセル報は対応しているつもりは無くても対応されている可能性があります。)
 ## バージョン(更新履歴・内容)
-### v1.0 ~ v1.5.1
+### v1.0 ~ v1.5-1
 作成&公開  
 題名を「earthquake-early-warning-receiver」から「earthquake-infomation-receiver」に変更(緊急地震速報以外の情報も載せる可能性があるため)  
 「seismic-wave-countdown」を追加  
@@ -20,7 +20,7 @@
 「index.html」を追加  
 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更  
 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更2
-### v1.6 ~ v1.10.2
+### v1.6 ~ v1.10-2
 飛ぶURLの修正  
 「README.md」を一部変更  
 「index.html」のボタンのURLを新しいタブに開くように変更  
@@ -28,7 +28,7 @@
 「index.html」のコマンドミス修正  
 「index.html」のボタンのサブタイトルをそれぞれ変更  
 「index.html」「seismic-wave-countdown.html」のタブのタイトルを変更
-### v1.11 ~ v1.12.3
+### v1.11 ~ v1.12-3
 「README.md」の一部を変更  
 「index.html」の一部を変更
 「index.html」の一部の変更
@@ -66,7 +66,7 @@
 「index.html」の404エラーを解消(したはず)  
 「favicon.ico」を作成したが動作せず(サイズ関係かな)  
 「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
-### v7.0 ~ v7.11
+### v7.0 ~ v7.12
 「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)  
 「earthquake-early-warning-receiver.html」のプログラムの順番が受信しづらくさせていた問題を修正  
 「favicon.ico」でタブに表示されるアイコンを設定できた！  
@@ -76,7 +76,8 @@
 「earthquake-early-warning-receiver.html」のページのタブにアイコンを設定  
 「kosho.html」のページのタブにアイコンを設定  
 「earthquake-early-warning-receiver.html」の未発表表記にするタイミングを地震発生から10分後に変更  
-「earthquake-early-warning-receiver.html」の※文の変更
+「earthquake-early-warning-receiver.html」の※文の変更  
+「README.md」の“バージョン(変更履歴・内容)”の表記が不適切だったため修正
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
