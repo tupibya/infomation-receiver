@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<title>全国気象警報受信機（気象庁API）</title>
+<title>全国気象警報受信機（GitHub Pages版）</title>
 
 <style>
   body {
@@ -44,13 +44,16 @@
 </head>
 
 <body>
-<h1>全国気象警報受信機（気象庁API）</h1>
+<h1>全国気象警報受信機（GitHub Pages版）</h1>
 
 <select id="prefSelector"></select>
 <div id="warnings"></div>
 
 <script>
-// 都道府県コード一覧（気象庁API）
+// GitHub Pages の JSON を読む
+const BASE = "https://<USERNAME>.github.io/<REPO>/data/";
+
+// 都道府県コード一覧
 const PREFS = {
   "北海道": "010000","青森県": "020000","岩手県": "030000","宮城県": "040000",
   "秋田県": "050000","山形県": "060000","福島県": "070000","茨城県": "080000",
@@ -83,7 +86,8 @@ selector.value = PREFS["埼玉県"];
 async function loadWarnings() {
   const code = selector.value;
   const prefName = selector.options[selector.selectedIndex].textContent;
-  const url = `https://www.jma.go.jp/bosai/warning/data/warning/${code}.json`;
+
+  const url = `${BASE}${code}.json`;
 
   try {
     const res = await fetch(url);
@@ -108,15 +112,14 @@ async function loadWarnings() {
     });
 
   } catch (e) {
-    container.innerHTML =
-      "<p>取得エラー：HTTP/HTTPSで開いてください。</p>";
+    container.innerHTML = "<p>取得エラー：GitHub Actions が JSON を生成しているか確認してください。</p>";
   }
 }
 
 // 県変更時に更新
 selector.addEventListener("change", loadWarnings);
 
-// 30秒ごとに自動更新（平常時用）
+// 30秒ごとに自動更新
 setInterval(loadWarnings, 30000);
 
 // 指定時刻（0,3,9,12,15,18,21時）で更新
@@ -135,7 +138,6 @@ setInterval(() => {
     lastTrigger = current;
   }
 
-  // 分が変わったらフラグリセット
   const lastMin = lastTrigger.split(":")[1];
   if (lastMin && Number(lastMin) !== mm) {
     lastTrigger = "";
