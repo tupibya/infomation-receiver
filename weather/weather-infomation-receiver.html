@@ -5,131 +5,199 @@
 <title>全国気象警報受信機</title>
 
 <style>
+  :root {
+    --bg: #0f1115;
+    --card-bg: #181b22;
+    --text: #ffffff;
+    --warn: #ff3b3b;
+    --adv: #ffcc00;
+    --info: #4caf50;
+  }
   body {
-    font-family: "Inter", sans-serif;
-    background: #121212;
-    color: #fff;
+    font-family: system-ui, -apple-system, "Inter", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    margin: 0;
     padding: 20px;
   }
-  h1 {
+  header {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 16px;
+  }
+  h1 {
+    margin: 0;
+    font-size: 22px;
+  }
+  #meta {
+    font-size: 12px;
+    opacity: 0.7;
+    margin-top: 4px;
+  }
+  #topbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 16px;
+    align-items: center;
+    flex-wrap: wrap;
   }
   #prefSelector {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
+    flex: 1;
+    padding: 8px 10px;
     border-radius: 8px;
-    background: #1e1e1e;
-    color: #fff;
     border: none;
+    background: #1e222b;
+    color: var(--text);
+  }
+  #autoRotateLabel {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    opacity: 0.8;
   }
   #warnings {
     display: grid;
-    gap: 15px;
+    gap: 12px;
   }
   .card {
-    background: #1e1e1e;
-    padding: 15px;
+    background: var(--card-bg);
+    padding: 12px 14px;
     border-radius: 10px;
-    border-left: 5px solid #ffcc00;
+    border-left: 4px solid var(--info);
+  }
+  .card.warn {
+    border-left-color: var(--warn);
+  }
+  .card.adv {
+    border-left-color: var(--adv);
   }
   .card h2 {
-    margin: 0 0 10px;
-    font-size: 20px;
+    margin: 0 0 6px;
+    font-size: 16px;
   }
   .card p {
     margin: 0;
-    opacity: 0.8;
+    font-size: 12px;
+    opacity: 0.85;
+  }
+  #empty {
+    font-size: 13px;
+    opacity: 0.7;
   }
 </style>
 </head>
 
 <body>
-<h1>全国気象警報受信機</h1>
+<header>
+  <h1>全国気象警報受信機</h1>
+  <div id="meta"></div>
+</header>
 
-<select id="prefSelector"></select>
+<div id="topbar">
+  <select id="prefSelector"></select>
+  <label id="autoRotateLabel">
+    <input type="checkbox" id="autoRotate" checked>
+    自動県切替
+  </label>
+</div>
+
 <div id="warnings"></div>
+<div id="empty" style="display:none;">現在、発表中の警報・注意報はありません。</div>
 
 <script>
-const PREFS = {
-  "北海道": "010000", "青森県": "020000", "岩手県": "030000", "宮城県": "040000",
-  "秋田県": "050000", "山形県": "060000", "福島県": "070000", "茨城県": "080000",
-  "栃木県": "090000", "群馬県": "100000", "埼玉県": "110000", "千葉県": "120000",
-  "東京都": "130000", "神奈川県": "140000", "新潟県": "150000", "富山県": "160000",
-  "石川県": "170000", "福井県": "180000", "山梨県": "190000", "長野県": "200000",
-  "岐阜県": "210000", "静岡県": "220000", "愛知県": "230000", "三重県": "240000",
-  "滋賀県": "250000", "京都府": "260000", "大阪府": "270000", "兵庫県": "280000",
-  "奈良県": "290000", "和歌山県": "300000", "鳥取県": "310000", "島根県": "320000",
-  "岡山県": "330000", "広島県": "340000", "山口県": "350000", "徳島県": "360000",
-  "香川県": "370000", "愛媛県": "380000", "高知県": "390000", "福岡県": "400000",
-  "佐賀県": "410000", "長崎県": "420000", "熊本県": "430000", "大分県": "440000",
-  "宮崎県": "450000", "鹿児島県": "460000", "沖縄県": "470000"
-};
+const PREFS = [
+  ["北海道","010000"],["青森県","020000"],["岩手県","030000"],["宮城県","040000"],
+  ["秋田県","050000"],["山形県","060000"],["福島県","070000"],["茨城県","080000"],
+  ["栃木県","090000"],["群馬県","100000"],["埼玉県","110000"],["千葉県","120000"],
+  ["東京都","130000"],["神奈川県","140000"],["新潟県","150000"],["富山県","160000"],
+  ["石川県","170000"],["福井県","180000"],["山梨県","190000"],["長野県","200000"],
+  ["岐阜県","210000"],["静岡県","220000"],["愛知県","230000"],["三重県","240000"],
+  ["滋賀県","250000"],["京都府","260000"],["大阪府","270000"],["兵庫県","280000"],
+  ["奈良県","290000"],["和歌山県","300000"],["鳥取県","310000"],["島根県","320000"],
+  ["岡山県","330000"],["広島県","340000"],["山口県","350000"],["徳島県","360000"],
+  ["香川県","370000"],["愛媛県","380000"],["高知県","390000"],["福岡県","400000"],
+  ["佐賀県","410000"],["長崎県","420000"],["熊本県","430000"],["大分県","440000"],
+  ["宮崎県","450000"],["鹿児島県","460000"],["沖縄県","470000"]
+];
 
-let lastWarningsText = ""; // 読み上げの重複防止
-
-// 県リストを生成
 const selector = document.getElementById("prefSelector");
-Object.keys(PREFS).forEach(pref => {
-  const opt = document.createElement("option");
-  opt.value = PREFS[pref];
-  opt.textContent = pref;
-  selector.appendChild(opt);
-});
+const autoRotate = document.getElementById("autoRotate");
+const meta = document.getElementById("meta");
+const container = document.getElementById("warnings");
+const empty = document.getElementById("empty");
 
-// 初期表示：埼玉県（ユーザーの現在地）
-selector.value = PREFS["埼玉県"];
+let lastSpoken = "";
+let rotateIndex = 0;
+
+// セレクタ生成
+PREFS.forEach(([name, code], i) => {
+  const opt = document.createElement("option");
+  opt.value = code;
+  opt.textContent = name;
+  selector.appendChild(opt);
+  if (name === "埼玉県") rotateIndex = i;
+});
+selector.selectedIndex = rotateIndex;
 
 async function loadWarnings() {
   const code = selector.value;
+  const prefName = selector.options[selector.selectedIndex].textContent;
   const url = `https://www.jma.go.jp/bosai/warning/data/warning/${code}.json`;
 
   try {
     const res = await fetch(url);
     const data = await res.json();
 
-    const areaWarnings = data.warning[0].warnings;
-    const container = document.getElementById("warnings");
+    meta.textContent = `${prefName} / 発表時刻: ${data.reportDatetime || "不明"}`;
+
+    const warnings = (data.warning && data.warning[0] && data.warning[0].warnings) || [];
     container.innerHTML = "";
+    empty.style.display = warnings.length ? "none" : "block";
 
-    let textToSpeak = "";
+    let speakText = "";
 
-    areaWarnings.forEach(w => {
+    warnings.forEach(w => {
       const card = document.createElement("div");
-      card.className = "card";
+      const isWarn = /警報/.test(w.headline);
+      const isAdv = /注意報/.test(w.headline);
+      card.className = "card" + (isWarn ? " warn" : isAdv ? " adv" : "");
 
       card.innerHTML = `
         <h2>${w.headline}</h2>
-        <p>種別コード: ${w.code}</p>
-        <p>発表状態: ${w.status}</p>
+        <p>コード: ${w.code}</p>
+        <p>状態: ${w.status}</p>
       `;
-
       container.appendChild(card);
 
-      // 読み上げ用テキスト
-      textToSpeak += `${w.headline}、`;
+      speakText += `${prefName}、${w.headline}、${w.status}。`;
     });
 
-    // 新しい警報が出たら読み上げ
-    if (textToSpeak && textToSpeak !== lastWarningsText) {
-      speechSynthesis.speak(new SpeechSynthesisUtterance(textToSpeak));
-      lastWarningsText = textToSpeak;
+    if (speakText && speakText !== lastSpoken) {
+      speechSynthesis.cancel();
+      speechSynthesis.speak(new SpeechSynthesisUtterance(speakText));
+      lastSpoken = speakText;
     }
-
   } catch (e) {
-    console.error("警報取得エラー:", e);
+    meta.textContent = `${prefName} / 取得エラー`;
+    container.innerHTML = "";
+    empty.style.display = "block";
   }
 }
 
-// 県変更時に自動更新
-selector.addEventListener("change", loadWarnings);
+selector.addEventListener("change", () => {
+  rotateIndex = selector.selectedIndex;
+  loadWarnings();
+});
 
-// 初回読み込み
+setInterval(() => {
+  if (!autoRotate.checked) return;
+  rotateIndex = (rotateIndex + 1) % PREFS.length;
+  selector.selectedIndex = rotateIndex;
+  loadWarnings();
+}, 30000); // 30秒ごとに県を自動切替
+
 loadWarnings();
-
-// 30秒ごとに自動更新
-setInterval(loadWarnings, 30000);
+setInterval(loadWarnings, 20000); // 20秒ごとに同県を再取得
 </script>
 
 </body>
