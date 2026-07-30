@@ -66,11 +66,12 @@
 「index.html」の404エラーを解消(したはず)  
 「favicon.ico」を作成したが動作せず(サイズ関係かな)  
 「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
-### v7.0 ~ v7.6
+### v7.0 ~ v7.7
 「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)  
 「earthquake-early-warning-receiver.html」のプログラムの順番が受信しづらくさせていた問題を修正  
 「favicon.ico」でタブに表示されるアイコンを設定できた！  
-「favicon.ico」で全てのサイトのタブにアイコンを設定
+「favicon.ico」で全てのサイトのタブにアイコンを設定  
+「weather-infomation-receiver.html」故障
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
