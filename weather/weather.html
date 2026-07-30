@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <link rel="icon" href="/favicon.ico" sizes="1024x1024">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>受信機選択</title>
+    <style>
+        /* 全体のリセットと背景グラデーション */
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        /* コンテナの配置 */
+        .container {
+            display: flex;
+            gap: 40px;
+            max-width: 800px;
+            width: 90%;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        /* リンクカードの基本スタイル */
+        .nav-card {
+            flex: 1;
+            position: relative;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        /* カードのホバー効果 */
+        .nav-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* ホバー時の輝き */
+        .card:hover {
+            border-color: #38bdf8;
+            box-shadow: 0 0 30px rgba(56, 189, 248, 0.2), 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        /* タイトルテキスト */
+        .title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+
+        /* 説明テキスト */
+        .subtitle {
+            font-size: 14px;
+            color: #94a3b8;
+            z-index: 2;
+            transition: color 0.3s ease;
+        }
+
+        .nav-card:hover .subtitle {
+            color: #e2e8f0;
+        }
+
+        /* 矢印アイコンの演出 */
+        .arrow {
+            position: absolute;
+            bottom: 24px;
+            right: 24px;
+            width: 32px;
+            height: 32px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .nav-card:hover .arrow {
+            background: #ffffff;
+            color: #0f172a;
+            transform: translateX(4px);
+        }
+
+        /* レスポンシブ対応（スマホ表示時に縦並びにする） */
+        @media (max-width: 640px) {
+            .container {
+                flex-direction: column;
+                gap: 20px;
+            }
+            .nav-card {
+                height: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="https://tupibya.github.io/infomation-receiver/weather/weather-infomation-receiver.html" class="nav-card card" target="_blank">
+            <div class="title">気象情報受信機</div>
+            <div class="subtitle">AI作成のツールです。バグなどがありましたら、このリポジトリのIssuesで詳しく教えてください。</div>
+            <div class="arrow">→</div>
+        </a>
+    </div>
+
+</body>
+</html>
