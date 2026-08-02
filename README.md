@@ -1,5 +1,5 @@
 # infomation-receiver
->[!inportant]
+>[!important]
 >・震度速報  
 >・震源情報  
 >・地震情報  
