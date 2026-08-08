@@ -11,6 +11,7 @@
 >上記は未だ対応されていません。ご了承下さい。  
 >また、AIを使ったウェブアプリケーションになる可能性があるため、コードやUIに注意してご使用下さい。  
 >(キャンセル報は対応されている可能性があります。)
+
 >[!important]
 >現在は、「earthquake-early-warning-receiver.html」こと「緊急地震速報受信機」しか機能していない事と、それも機能するか試験中ですので、実際に動作していたらIssuesへ飛び込んで来て頂けたらと思います。
 ## 概要
@@ -19,76 +20,77 @@
 ## バージョン(更新履歴・内容)
 ### v1.0 ~ v1.5-1
 作成&公開  
-題名を「earthquake-early-warning-receiver」から「earthquake-infomation-receiver」に変更(緊急地震速報以外の情報も載せる可能性があるため)  
-「seismic-wave-countdown」を追加  
-「earthquake-early-warning-receiver」をバージョンアップにつきこちらもバージョンアップ  
-「index.html」を追加  
-「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更  
-「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更2
+- 題名を「earthquake-early-warning-receiver」から「earthquake-infomation-receiver」に変更(緊急地震速報以外の情報も載せる可能性があるため)
+- 「seismic-wave-countdown」を追加
+- 「earthquake-early-warning-receiver」をバージョンアップにつきこちらもバージョンアップ
+- 「index.html」を追加
+- 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更
+- 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更2
 ### v1.6 ~ v1.10-2
-飛ぶURLの修正  
-「README.md」を一部変更  
-「index.html」のボタンのURLを新しいタブに開くように変更  
-「REDME.md」を一部変更  
-「index.html」のコマンドミス修正  
-「index.html」のボタンのサブタイトルをそれぞれ変更  
-「index.html」「seismic-wave-countdown.html」のタブのタイトルを変更
+- 飛ぶURLの修正
+- 「README.md」を一部変更
+- 「index.html」のボタンのURLを新しいタブに開くように変更
+- 「REDME.md」を一部変更
+- 「index.html」のコマンドミス修正
+- 「index.html」のボタンのサブタイトルをそれぞれ変更
+- 「index.html」「seismic-wave-countdown.html」のタブのタイトルを変更
 ### v1.11 ~ v1.12-3
-「README.md」の一部を変更  
-「index.html」の一部を変更
-「index.html」の一部の変更
-「index.html」の一部を変更
-「index.html」と「README.md」の細かい文字を修正
+- 「README.md」の一部を変更
+- 「index.html」の一部を変更
+- 「index.html」の一部の変更
+- 「index.html」の一部を変更
+- 「index.html」と「README.md」の細かい文字を修正
 ### v2.0 ~ v2.1
-大量の修正・変更・追加・訓練・練習がありました。
-「index.html」の超細かな修正・変更
+- 大量の修正・変更・追加・訓練・練習がありました。
+- 「index.html」の超細かな修正・変更
 ### v3.0 ~ v3.5
-沢山のhtmlファイルを大幅に変更  
-「index.html」のスクロールの試み
+- 沢山のhtmlファイルを大幅に変更  
+- 「index.html」のスクロールの試み
 ### v4.0 ~ v4.1
-色々  
-タイトルを変更
+- 色々
+- タイトルを変更
 ### v5.0 ~ v5.12
-大型アップデートにふさわしいアップデートしたんでこれです  
-色々  
-「haki.html」の一部を変更  
-色々  
-アイコン付けた  
-アイコンによる修正  
-アイコンによる修正×2
+- 大型アップデートにふさわしいアップデートしたんでこれです  
+- 色々
+- 「haki.html」の一部を変更
+- 色々
+- アイコン付けた
+- アイコンによる修正
+- アイコンによる修正×2
 ### v6.0 ~ v6.14
-色々  
-「README.md」の改行できていなかった問題を修正  
-「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)  
-「kosho.html」の文を全部修正  
-「earthquake-early-warning-receiver.html」復活！！！  
-「earthquake-early-warning-receiver.html」を一部  
-「README.md」の改行できていなかった問題を修正  
-「earthquake-early-warning-receiver.html」がPLUM法に対応！！！  
-「earthquake-early-warning-receiver.html」のプログラムを少し修正  
-「README.md」の文を多少修正  
-「earthquake-early-warning-receiver-html」がリストの長さの変更ではなく発表時刻or発生時刻を読み取り緊急地震速報を受信するように変更  
-「index.html」の404エラーを解消(したはず)  
-「favicon.ico」を作成したが動作せず(サイズ関係かな)  
-「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
-### v7.0 ~ v7.16
-「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)  
-「earthquake-early-warning-receiver.html」のプログラムの順番が受信しづらくさせていた問題を修正  
-「favicon.ico」でタブに表示されるアイコンを設定できた！  
-「favicon.ico」で全てのサイトのタブにアイコンを設定  
-「weather-infomation-receiver.html」故障  
-「error」フォルダにあるページは全てタブアイコンを禁止マークに設定  
-「earthquake-early-warning-receiver.html」のページのタブにアイコンを設定  
-「kosho.html」のページのタブにアイコンを設定  
-「earthquake-early-warning-receiver.html」の未発表表記にするタイミングを地震発生から10分後に変更  
-「earthquake-early-warning-receiver.html」の※文の変更  
-「README.md」の“バージョン(変更履歴・内容)”の表記が不適切だったため修正  
-「weather-infomation-receiver.html」のjsonと接続できなかった問題を修正  
-「weather.html」のタブアイコンを正規に変更  
-「weather-infomation-receiver.html」のページを「kosho.html」に変更  
-「.github/workflows」からの通知がうるさいため削除  
-「index.html」でページ移動しても新しいタブを開かないように変更  
-エラーページは新しいタブで開くように変更
+- 色々
+- 「README.md」の改行できていなかった問題を修正
+- 「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)
+- 「kosho.html」の文を全部修正
+- 「earthquake-early-warning-receiver.html」復活！！！
+- 「earthquake-early-warning-receiver.html」を一部
+- 「README.md」の改行できていなかった問題を修正
+- 「earthquake-early-warning-receiver.html」がPLUM法に対応！！！
+- 「earthquake-early-warning-receiver.html」のプログラムを少し修正
+- 「README.md」の文を多少修正
+-「earthquake-early-warning-receiver-html」がリストの長さの変更ではなく発表時刻or発生時刻を読み取り緊急地震速報を受信するように変更
+- 「index.html」の404エラーを解消(したはず)
+- 「favicon.ico」を作成したが動作せず(サイズ関係かな)
+- 「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
+### v7.0 ~ v7.20
+- 「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)
+- 「earthquake-early-warning-receiver.html」のプログラムの順番が受信しづらくさせていた問題を修正
+- 「favicon.ico」でタブに表示されるアイコンを設定できた！
+- 「favicon.ico」で全てのサイトのタブにアイコンを設定
+- 「weather-infomation-receiver.html」故障
+- 「error」フォルダにあるページは全てタブアイコンを禁止マークに設定
+- 「earthquake-early-warning-receiver.html」のページのタブにアイコンを設定
+- 「kosho.html」のページのタブにアイコンを設定
+- 「earthquake-early-warning-receiver.html」の未発表表記にするタイミングを地震発生から10分後に変更
+- 「earthquake-early-warning-receiver.html」の※文の変更
+- 「README.md」の“バージョン(変更履歴・内容)”の表記が不適切だったため修正
+- 「weather-infomation-receiver.html」のjsonと接続できなかった問題を修正
+- 「weather.html」のタブアイコンを正規に変更
+- 「weather-infomation-receiver.html」のページを「kosho.html」に変更
+- 「.github/workflows」からの通知がうるさいため削除
+- 「index.html」でページ移動しても新しいタブを開かないように変更
+- エラーページは新しいタブで開くように変更
+- 「README.md」の一部を変更(PWA対応の準備が出来たため、次回は大型アップデートかも)
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
