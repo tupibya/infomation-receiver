@@ -1,6 +1,6 @@
 {
-  "name": "Earthquake Early Warning Receiver",
-  "short_name": "EEWR",
+  "name": "eewr",
+  "short_name": "eewr",
   "start_url": "./earthquake-early-warning-receiver.html",
   "scope": "./",
   "display": "standalone",
