@@ -26,7 +26,7 @@
 - 「index.html」を追加
 - 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更
 - 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更2
-### v1.6 ~ v1.10-2
+### v1.6 ~ v5.12
 - 飛ぶURLの修正
 - 「README.md」を一部変更
 - 「index.html」のボタンのURLを新しいタブに開くように変更
@@ -34,22 +34,17 @@
 - 「index.html」のコマンドミス修正
 - 「index.html」のボタンのサブタイトルをそれぞれ変更
 - 「index.html」「seismic-wave-countdown.html」のタブのタイトルを変更
-### v1.11 ~ v1.12-3
 - 「README.md」の一部を変更
 - 「index.html」の一部を変更
 - 「index.html」の一部の変更
 - 「index.html」の一部を変更
 - 「index.html」と「README.md」の細かい文字を修正
-### v2.0 ~ v2.1
 - 大量の修正・変更・追加・訓練・練習がありました。
 - 「index.html」の超細かな修正・変更
-### v3.0 ~ v3.5
 - 沢山のhtmlファイルを大幅に変更  
 - 「index.html」のスクロールの試み
-### v4.0 ~ v4.1
 - 色々
 - タイトルを変更
-### v5.0 ~ v5.12
 - 大型アップデートにふさわしいアップデートしたんでこれです  
 - 色々
 - 「haki.html」の一部を変更
@@ -57,7 +52,7 @@
 - アイコン付けた
 - アイコンによる修正
 - アイコンによる修正×2
-### v6.0 ~ v6.14
+### v6.0 ~ v8.0
 - 色々
 - 「README.md」の改行できていなかった問題を修正
 - 「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)
@@ -72,7 +67,6 @@
 - 「index.html」の404エラーを解消(したはず)
 - 「favicon.ico」を作成したが動作せず(サイズ関係かな)
 - 「earthquake-early-warning-receiver.html」が受信しなかった問題を修正
-### v7.0 ~ v7.20
 - 「fetch-warning.yml」を作成しワークフローを走らせたが難しすぎて諦めた(やり方あったらIssuesで)
 - 「earthquake-early-warning-receiver.html」のプログラムの順番が受信しづらくさせていた問題を修正
 - 「favicon.ico」でタブに表示されるアイコンを設定できた！
@@ -91,6 +85,7 @@
 - 「index.html」でページ移動しても新しいタブを開かないように変更
 - エラーページは新しいタブで開くように変更
 - 「README.md」の一部を変更(PWA対応の準備が出来たため、次回は大型アップデートかも)
+- PWA対応！！！！！(インストール出来ます)
 ## API詳細
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
