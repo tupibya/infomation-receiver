@@ -18,7 +18,7 @@
 翻訳してみたら分かる通り、「情報受信機」です。
 即時に情報を受信して表示するものです。  
 ## バージョン(更新履歴・内容)
-### v1.0 ~ v1.5-1
+### v1.0 ~ v5.12
 作成&公開  
 - 題名を「earthquake-early-warning-receiver」から「earthquake-infomation-receiver」に変更(緊急地震速報以外の情報も載せる可能性があるため)
 - 「seismic-wave-countdown」を追加
@@ -26,7 +26,6 @@
 - 「index.html」を追加
 - 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更
 - 「seismic-wave-countdown.html」をより分かりやすくきっちりと計算されるhtmlに変更2
-### v1.6 ~ v5.12
 - 飛ぶURLの修正
 - 「README.md」を一部変更
 - 「index.html」のボタンのURLを新しいタブに開くように変更
@@ -52,7 +51,7 @@
 - アイコン付けた
 - アイコンによる修正
 - アイコンによる修正×2
-### v6.0 ~ v8.0
+### v6.0 ~ v8.0(Pre-Release)
 - 色々
 - 「README.md」の改行できていなかった問題を修正
 - 「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)
@@ -85,16 +84,15 @@
 - 「index.html」でページ移動しても新しいタブを開かないように変更
 - エラーページは新しいタブで開くように変更
 - 「README.md」の一部を変更(PWA対応の準備が出来たため、次回は大型アップデートかも)
-- PWA対応！！！！！(インストール出来ます)
+- バージョン表記にミスがあったため修正
+- PWA対応！！！！！インストール可能です。
 ## API詳細
+### eewr
 [P2P地震情報](https://p2pquake.net)を使用しました。  
 URLは[こちら](https://api.p2pquake.net/v2/history?codes=556&limit=1&offset=0)です。
 ## プライバシー・ポリシー
-### earthquake-early-warning-receiver
+### eewr
 緊急地震速報(警報)が発表されたら即時に情報が入りますが、気象庁の都合により、低精度な可能性があります。  
 ご了承下さい。
-### seismic-wave-countdown
-このサイトは破棄されました。apiからの情報を受信しない可能性があります。  
-現在はhaki.htmlで破棄内容ページを作成していました。
 ## 利用規約
 これは、[creative commons zero v1.0 universal](https://creativecommons.org/publicdomain/zero/1.0/deed.ja/)に従って公開されています。
