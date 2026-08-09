@@ -2,7 +2,7 @@
   "name": "Earthquake Early Warning Receiver",
   "short_name": "EEWR",
   "start_url": "./earthquake-early-warning-receiver.html",
-  "scope": "./earthquake-early-warning-receiver.html",
+  "scope": "./",
   "display": "standalone",
   "orientation": "landscape",
   "background_color": "#000000",
