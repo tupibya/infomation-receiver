@@ -1,4 +1,3 @@
 self.addEventListener("install", () => {
-  fetch("./EEWR-manifest.json");
+  fetch("./manifest.json");
 });
-console.log("Hay!")
