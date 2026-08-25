@@ -52,7 +52,7 @@
 - アイコン付けた
 - アイコンによる修正
 - アイコンによる修正×2
-### v6.0 ~ v9.2
+### v6.0 ~ v9.2(Pre-Release)
 - 色々
 - 「README.md」の改行できていなかった問題を修正
 - 「earthquake-early-warning-receiver.html」が故障(破棄までは行かない)
