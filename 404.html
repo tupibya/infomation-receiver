@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>404 - ページが見つかりません</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      --bg: #0d1117;
+      --fg: #c9d1d9;
+      --accent: #58a6ff;
+      --button: #238636;
+      --button-hover: #2ea043;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Inter", "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at top, #161b22 0, #0d1117 45%, #010409 100%);
+      color: var(--fg);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .wrap {
+      text-align: center;
+      padding: 24px;
+      max-width: 480px;
+    }
+    .code {
+      font-size: 4rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.5rem;
+    }
+    h1 {
+      font-size: 1.6rem;
+      margin: 0 0 0.75rem;
+    }
+    p {
+      margin: 0 0 1.5rem;
+      font-size: 0.98rem;
+      opacity: 0.85;
+    }
+    .btn-main {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.4rem;
+      padding: 10px 20px;
+      border-radius: 999px;
+      border: none;
+      background: var(--button);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background 0.18s ease, transform 0.12s ease;
+    }
+    .btn-main:hover {
+      background: var(--button-hover);
+      transform: translateY(-1px);
+    }
+    .sub-link {
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      opacity: 0.7;
+    }
+    .sub-link a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .sub-link a:hover {
+      text-decoration: underline;
+    }
+    .hint {
+      margin-top: 0.6rem;
+      font-size: 0.8rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>ページが見つかりませんでした</h1>
+    <p>
+      入力された URL に対応するページが存在しないようです。<br>
+      アドレスのスペルをもう一度確認してみてください。
+    </p>
+
+    <!-- ホームへのリンクは自分のトップページに合わせて変更してね -->
+    <a href="/" class="btn-main">
+      <span>ホームに戻る</span>
+    </a>
+
+    <div class="sub-link">
+      <a href="https://docs.github.com/ja/pages">GitHub Pages の使い方を確認する</a>
+    </div>
+
+    <div class="hint">
+      このページは <code>404.html</code> として公開ディレクトリの直下に置くと自動で表示されます。
+    </div>
+  </div>
+</body>
+</html>
